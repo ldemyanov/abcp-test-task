@@ -10,6 +10,8 @@ function App() {
   const [item, setItem] = useState<User | null>(null);
 
   const receiveUser = useCallback(async () => {
+    console.log(new Date().toString());
+
     const id = getRandomNumber(1, 10);
     const randomUser = await getUserById(id);
     if (randomUser) {
